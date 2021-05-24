@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/oxygen2"
+        android:title="Oxygen"/>
+
+    <item
+        android:id="@+id/icu2"
+        android:title="ICU"/>
+    <item
+    android:id="@+id/pri2"
+    android:title="PRI"/>
+
+    <item
+        android:id="@+id/dev2"
+        android:title="Developers"/>
+</menu>

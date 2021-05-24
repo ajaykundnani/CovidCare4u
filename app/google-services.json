@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "805599987773",
+    "project_id": "ahmedabadcoronabeds",
+    "storage_bucket": "ahmedabadcoronabeds.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805599987773:android:8911fc4226959617b6c254",
+        "android_client_info": {
+          "package_name": "com.example.ahmedabadcoronabeds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805599987773-v5ojr5mvm06slksjlaecksumg63gaa23.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb9gg06LiZLSj6ydF7Mxr4aq74a-Q64jE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "805599987773-v5ojr5mvm06slksjlaecksumg63gaa23.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
