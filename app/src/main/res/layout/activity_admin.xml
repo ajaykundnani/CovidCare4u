@@ -54,6 +54,15 @@
         android:textColor="@color/black"/>
 
 
+    <EditText
+        android:id="@+id/hospital_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Private,Rural,AMC"
+        android:textSize="25sp"
+        android:textColor="@color/black"/>
+
+
 
     <Button
         android:id="@+id/submit"

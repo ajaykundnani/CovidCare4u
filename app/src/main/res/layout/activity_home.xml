@@ -146,6 +146,7 @@
                             app:cardBackgroundColor="#6fffe9">
 
                             <LinearLayout
+                                android:id="@+id/l3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -291,6 +292,7 @@
                             app:cardBackgroundColor="#6fffe9">
 
                             <LinearLayout
+                                android:id="@+id/l6"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"

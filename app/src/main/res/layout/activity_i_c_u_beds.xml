@@ -8,21 +8,23 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="COVID-19 ICU Beds"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="20sp"/>
 
     <EditText
+        android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="search"
-        android:layout_margin="16dp"
-        android:textSize="18sp"
-        android:drawableLeft="@drawable/search"/>
+        android:hint="Search"
+        android:drawableLeft="@drawable/search"
+        android:textSize="15dp"/>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:background="@color/black"

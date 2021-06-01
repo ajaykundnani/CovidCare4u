@@ -82,12 +82,6 @@ public class OxygenActivity extends AppCompatActivity
                     }
                 });
 
-
-
-
-
-
-
             }
 
             @NonNull

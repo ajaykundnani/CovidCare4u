@@ -22,8 +22,8 @@ import java.util.HashMap;
 
 public class AdminActivity extends AppCompatActivity {
     private Button submit;
-    private EditText hospital_name,hospital_address,hospital_contact,hospital_Code;
-    private DatabaseReference hospitalRef;
+    private EditText hospital_name,hospital_address,hospital_contact,hospital_Code,hospital_category;
+    private DatabaseReference hospitalRef,hRef;
 
 
     private String demo = "null";
@@ -42,6 +42,7 @@ public class AdminActivity extends AppCompatActivity {
         hospital_address=findViewById(R.id.hospital_address);
         hospital_contact=findViewById(R.id.hospital_contact);
         hospital_Code=findViewById(R.id.hospital_Code);
+        hospital_category=findViewById(R.id.hospital_category);
 
 
 
@@ -93,18 +94,25 @@ public class AdminActivity extends AppCompatActivity {
                 {
                     Toast.makeText(AdminActivity.this, "Enter Code", Toast.LENGTH_SHORT).show();
                 }
+                else if (TextUtils.isEmpty(hospital_category.getText().toString()))
+                {
+                    Toast.makeText(AdminActivity.this, "Enter Category", Toast.LENGTH_SHORT).show();
+                }
+
                 else
                 {
                     String name=hospital_name.getText().toString();
                     String address = hospital_address.getText().toString();
                     String num = hospital_contact.getText().toString();
                     String code = hospital_Code.getText().toString();
+                    String category = hospital_category.getText().toString();
 
 
                     HashMap<String,Object> hashMap = new HashMap<>();
                     hashMap.put("hospital_name",name);
                     hashMap.put("hospital_address",address);
                     hashMap.put("hospital_contactno",num);
+
 
                     hashMap.put("available",demo);
                     hashMap.put("total_available",demo);
@@ -117,7 +125,7 @@ public class AdminActivity extends AppCompatActivity {
 
                     hashMap.put("code",code);
 
-                    hospitalRef.child(name).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    /*hospitalRef.child(name).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid)
                         {
@@ -126,6 +134,17 @@ public class AdminActivity extends AppCompatActivity {
                             hospital_address.setText("");
                             hospital_contact.setText("");
                             hospital_Code.setText("");
+                        }
+                    });*/
+
+                    hRef=FirebaseDatabase.getInstance().getReference().child(category);
+
+                    hRef.child(name).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid)
+                        {
+                            Toast.makeText(AdminActivity.this, "All Record Addedd", Toast.LENGTH_SHORT).show();
+
                         }
                     });
 
