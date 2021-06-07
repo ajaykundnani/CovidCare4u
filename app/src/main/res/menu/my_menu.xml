@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/signup"
+        android:title="Signup"/>
 
     <item
-        android:id="@+id/oxygen2"
-        android:title="Oxygen"/>
+        android:id="@+id/login"
+        android:title="Login"/>
 
     <item
-        android:id="@+id/icu2"
-        android:title="ICU"/>
-    <item
-    android:id="@+id/pri2"
-    android:title="PRI"/>
-
-    <item
-        android:id="@+id/dev2"
-        android:title="Developers"/>
+        android:id="@+id/manage"
+        android:title="Manage"/>
 </menu>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="15dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/sample"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/hospital_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="Hospital Name"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/total_available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="20"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+             />
+
+        <TextView
+            android:id="@+id/l_available"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:text="7"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/l_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:text="TIME"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="10sp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
+
+
+

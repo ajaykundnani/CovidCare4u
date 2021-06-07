@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Covid Care 4 U</string>
+    <string-array name="category">
+        <item>AMC</item>
+        <item>Private</item>
+        <item>Rural</item>
+    </string-array>
 </resources>

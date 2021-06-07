@@ -2,107 +2,165 @@ package com.example.ahmedabadcoronabeds.Models;
 
 public class Hospital
 {
-    private String hospital_name,available,icu_b,hospital_address,hospital_contactno,
-            total_available,time,total_icu_b,code,time_icu_b;
-
-    public Hospital()
-    {
-
+    private String Name,Code,Address,Category,LastUpdateOn;
+    private double PhoneNo;
+    private double TO2;
+    private double VO2;
+    private double TIB;
+    private double VIB;
+    private double TICU;
+    private double VICU;
+    private double TICUV;
+    private double VICUV;
+    public Hospital() {
     }
 
-    public Hospital(String hospital_name, String available, String icu_b, String hospital_address, String hospital_contactno, String total_available, String time, String total_icu_b, String code, String time_icu_b)
-    {
-        this.hospital_name = hospital_name;
-        this.available = available;
-        this.icu_b = icu_b;
-        this.hospital_address = hospital_address;
-        this.hospital_contactno = hospital_contactno;
-        this.total_available = total_available;
-        this.time = time;
-        this.total_icu_b = total_icu_b;
-        this.code = code;
-        this.time_icu_b = time_icu_b;
+    public String getName() {
+        return Name;
     }
 
-    public String getTime_icu_b() {
-        return time_icu_b;
-    }
-
-    public void setTime_icu_b(String time_icu_b) {
-        this.time_icu_b = time_icu_b;
-    }
-
-    public String getTotal_icu_b() {
-        return total_icu_b;
-    }
-
-    public void setTotal_icu_b(String total_icu_b) {
-        this.total_icu_b = total_icu_b;
+    public void setName(String name) {
+        Name = name;
     }
 
     public String getCode() {
-        return code;
+        return Code;
     }
 
     public void setCode(String code) {
-        this.code = code;
+        Code = code;
     }
 
-    public String getTotal_available()
-    {
-        return total_available;
+    public String getAddress() {
+        return Address;
     }
 
-    public void setTotal_available(String total_available) {
-        this.total_available = total_available;
+    public void setAddress(String address) {
+        Address = address;
     }
 
-    public String getTime() {
-        return time;
+    public String getCategory() {
+        return Category;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setCategory(String category) {
+        Category = category;
     }
 
-    public String getHospital_address()
-    {
-        return hospital_address;
+    public String getLastUpdateOn() {
+        return LastUpdateOn;
     }
 
-    public void setHospital_address(String hospital_address) {
-        this.hospital_address = hospital_address;
+    public void setLastUpdateOn(String lastUpdateOn) {
+        LastUpdateOn = lastUpdateOn;
     }
 
-    public String getHospital_contactno() {
-        return hospital_contactno;
+    public double getPhoneNo() {
+        return PhoneNo;
     }
 
-    public void setHospital_contactno(String hospital_contactno) {
-        this.hospital_contactno = hospital_contactno;
+    public void setPhoneNo(int phoneNo) {
+        PhoneNo = phoneNo;
     }
 
-    public String getIcu_b() {
-        return icu_b;
+    public double getTO2() {
+        return TO2;
     }
 
-    public void setIcu_b(String icu_b) {
-        this.icu_b = icu_b;
+    public void setTO2(double TO2) {
+        this.TO2 = TO2;
     }
 
-    public String getAvailable() {
-        return available;
+    public double getVO2() {
+        return VO2;
     }
 
-    public void setAvailable(String available) {
-        this.available = available;
+    public void setVO2(double VO2) {
+        this.VO2 = VO2;
     }
 
-    public String getHospital_name() {
-        return hospital_name;
+    public double getTIB() {
+        return TIB;
     }
 
-    public void setHospital_name(String hospital_name) {
-        this.hospital_name = hospital_name;
+    public void setTIB(double TIB) {
+        this.TIB = TIB;
+    }
+
+    public double getVIB() {
+        return VIB;
+    }
+
+    public void setVIB(double VIB) {
+        this.VIB = VIB;
+    }
+
+    public double getTICU() {
+        return TICU;
+    }
+
+    public void setTICU(double TICU) {
+        this.TICU = TICU;
+    }
+
+    public double getVICU() {
+        return VICU;
+    }
+
+    public void setVICU(double VICU) {
+        this.VICU = VICU;
+    }
+
+    public double getTICUV() {
+        return TICUV;
+    }
+
+    public void setTICUV(double TICUV) {
+        this.TICUV = TICUV;
+    }
+
+    @Override
+    public String toString() {
+        return "Hospital{" +
+                "Name='" + Name + '\'' +
+                ", Code='" + Code + '\'' +
+                ", Address='" + Address + '\'' +
+                ", Category='" + Category + '\'' +
+                ", LastUpdateOn='" + LastUpdateOn + '\'' +
+                ", PhoneNo=" + PhoneNo +
+                ", TO2=" + TO2 +
+                ", VO2=" + VO2 +
+                ", TIB=" + TIB +
+                ", VIB=" + VIB +
+                ", TICU=" + TICU +
+                ", VICU=" + VICU +
+                ", TICUV=" + TICUV +
+                ", VICUV=" + VICUV +
+                '}';
+    }
+
+    public double getVICUV() {
+        return VICUV;
+    }
+
+    public void setVICUV(double VICUV) {
+        this.VICUV = VICUV;
+    }
+
+    public Hospital(String name, String code, String address, String category, String lastUpdateOn, int phoneNo, int TO2, int VO2, int TIB, int VIB, int TICU, int VICU, int TICUV, int VICUV) {
+        Name = name;
+        Code = code;
+        Address = address;
+        Category = category;
+        LastUpdateOn = lastUpdateOn;
+        PhoneNo = phoneNo;
+        this.TO2 = TO2;
+        this.VO2 = VO2;
+        this.TIB = TIB;
+        this.VIB = VIB;
+        this.TICU = TICU;
+        this.VICU = VICU;
+        this.TICUV = TICUV;
+        this.VICUV = VICUV;
     }
 }
