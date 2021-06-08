@@ -13,10 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ahmedabadcoronabeds.Models.Hospital;
 import com.example.ahmedabadcoronabeds.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HospitalHolder extends RecyclerView.Adapter<HospitalHolder.ViewHolder>{
 
 
-    private Hospital[] Hospitals;
+    private List<Hospital> hospitals = new ArrayList<>();
 
     @NonNull
     @Override
@@ -31,17 +34,18 @@ public class HospitalHolder extends RecyclerView.Adapter<HospitalHolder.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
 
-        viewHolder.hospital_name.setText(Hospitals[i].getName());
+        viewHolder.hospital_name.setText(hospitals.get(i).getName());
     }
 
 
     @Override
     public int getItemCount() {
-        return Hospitals.length;
+        return hospitals.size();
     }
 
-    public void setHospitalList(Hospital[] hospitals) {
-        this.Hospitals = hospitals;
+    public void setHospitalList(List<Hospital> hospitals)
+    {
+        this.hospitals = hospitals;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

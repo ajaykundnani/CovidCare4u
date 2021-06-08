@@ -69,7 +69,8 @@ public class DashboardActivity extends AppCompatActivity {
 
 
     //FireBase Database Fetching
-    private void LoadDatabase(ActivityDashboardBinding acb){
+    private void LoadDatabase(ActivityDashboardBinding acb)
+    {
         DatabaseReference dataReference = FirebaseDatabase.getInstance().getReference().child("Hospitals");
         dataReference.addValueEventListener(new ValueEventListener(){
             @Override
