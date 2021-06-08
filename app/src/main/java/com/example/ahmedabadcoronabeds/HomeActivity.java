@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.ahmedabadcoronabeds.Models.Hospital;
+import com.example.ahmedabadcoronabeds.Models.User;
 import com.example.ahmedabadcoronabeds.ViewHolder.HospitalHolder;
 import com.example.ahmedabadcoronabeds.databinding.ActivityDashboardBinding;
 import com.google.firebase.database.DataSnapshot;
@@ -21,6 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class HomeActivity extends AppCompatActivity
 {
