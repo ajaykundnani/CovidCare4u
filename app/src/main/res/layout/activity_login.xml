@@ -8,7 +8,7 @@
     tools:context=".LoginActivity" >
 
     <EditText
-        android:id="@+id/txtuname"
+        android:id="@+id/num"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
@@ -17,7 +17,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/txtpwd"
+        android:id="@+id/pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -25,11 +25,42 @@
         android:inputType="textPassword"
         android:hint="Password"/>
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/captcha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
+        android:gravity="center"
+        android:text="Q2ds5470"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/enter_captcha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:ems="10"
+        android:hint="Enter Above Showing"
+        android:inputType="textPersonName" />
+
+
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:onClick="Refresh"
+        android:text="Refresh"></Button>
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:onClick="Login"
         android:text="Login" />
 </LinearLayout>

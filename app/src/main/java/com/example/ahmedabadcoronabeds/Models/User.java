@@ -1,17 +1,17 @@
 package com.example.ahmedabadcoronabeds.Models;
 
 public class User {
-    private String Name, Password, Role, HospitalCode, MobileNo;
-
+    private String Name, Password, Role, HospitalCode, MobileNo, Age;
     public User() {
     }
 
-    public User(String Name, String Password, String Role, String HospitalCode, String MobileNo) {
-        this.Name = Name;
-        this.Password = Password;
-        this.Role = Role;
-        this.HospitalCode = HospitalCode;
-        this.MobileNo = MobileNo;
+    public User(String name, String password, String role, String hospitalCode, String mobileNo, String age) {
+        Name = name;
+        Password = password;
+        Role = role;
+        HospitalCode = hospitalCode;
+        MobileNo = mobileNo;
+        Age = age;
     }
 
     public String getName() {
@@ -46,6 +46,14 @@ public class User {
         this.HospitalCode = HospitalCode;
     }
 
+    public String getAge() {
+        return Age;
+    }
+
+    public void setAge(String age) {
+        Age = age;
+    }
+
     public String getMobileNo() {
         return MobileNo;
     }
@@ -53,7 +61,6 @@ public class User {
     public void setMobileNo(String MobileNo) {
         this.MobileNo = MobileNo;
     }
-
 
     @Override
     public String toString() {
@@ -63,8 +70,7 @@ public class User {
                 ", Role='" + Role + '\'' +
                 ", HospitalCode='" + HospitalCode + '\'' +
                 ", MobileNo='" + MobileNo + '\'' +
+                ", Age='" + Age + '\'' +
                 '}';
     }
-
-
 }

@@ -52,7 +52,7 @@ public class SignupActivity extends AppCompatActivity {
                 String Password = EditText_Password.getText().toString();
 
                 if(IsNewUser(MobileNo)){
-                    users.add(new User(EditText_Name.getText().toString(), EditText_Password.getText().toString(), "User","", EditText_MobileNo.getText().toString()));
+                    users.add(new User(EditText_Name.getText().toString(), EditText_Password.getText().toString(), "User","", EditText_MobileNo.getText().toString(),""));
                     System.out.println(users);
 
                     //Hash Map

@@ -3,193 +3,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="15dp"
-    android:layout_marginRight="15dp"
-    android:background="#ffffff"
     android:orientation="vertical"
+    android:layout_height="match_parent"
     tools:context=".ManageActivity">
 
     <TextView
-        android:id="@+id/heading"
+        android:id="@+id/main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:text="Welcome, Admin/SuperAdmin"
+        android:layout_gravity="center_horizontal"
         android:textColor="@color/black"
-        android:textSize="25sp"
         android:textStyle="bold"
+        android:textSize="20sp"/>
 
-        />
-
-    <TextView
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="20dp"
-        android:text="Click here to Logout"
-        android:textColor="#F44336"
-        android:textSize="20sp"
-        android:textStyle="bold"
-
-        />
-
-    <TableLayout
+    <EditText
+        android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stretchColumns="*"
-        >
+        android:hint="Search"
+        android:drawableLeft="@drawable/search"
+        android:textSize="15dp"/>
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:background="#64B5F6"
-                android:gravity="center"
-                android:text="No"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.5"
-                android:background="#64B5F6"
-                android:gravity="center"
-                android:text="Hospitals"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#64B5F6"
-                android:gravity="center"
-                android:text="Actions"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-
-        </TableRow>
-
-        <TableRow android:weightSum="3"
-            >
-
-
-            <TextView
-                android:id="@+id/ed1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:background="#89ABE3FF"
-                android:gravity="center"
-                android:text="1"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/ed2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:background="#89ABE3FF"
-                android:gravity="center"
-                android:text="Apollo"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/edit2"
-                android:layout_width="0dp"
-                android:layout_height="26dp"
-                android:layout_weight="0.5"
-                android:background="#89ABE3FF"
-
-
-                android:src="@drawable/edit_foreground" />
-
-            <ImageView
-                android:id="@+id/delete3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:background="#89ABE3FF"
-                android:src="@drawable/delete_foreground" />
-
-
-        </TableRow>
-
-        <TableRow android:weightSum="3">
-
-
-            <TextView
-                android:id="@+id/ed3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:background="#89ABE3FF"
-                android:gravity="center"
-                android:text="2"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/ed4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:background="#89ABE3FF"
-                android:gravity="center"
-                android:text="Civil"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/edit1"
-                android:layout_width="0dp"
-                android:layout_height="26dp"
-                android:layout_weight="0.5"
-                android:background="#89ABE3FF"
-
-
-                android:src="@drawable/edit_foreground" />
-
-            <ImageView
-                android:id="@+id/delete1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:background="#89ABE3FF"
-                android:src="@drawable/delete_foreground" />
-
-
-        </TableRow>
-
-    </TableLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/From"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp">
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Enter From Age"
+        android:inputType="textPersonName"
+        android:text="" />
 
-        <ImageView
-            android:id="@+id/add"
-            android:layout_width="86dp"
-            android:layout_height="87dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:src="@drawable/add_foreground" />
+    <EditText
+        android:id="@+id/To"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Enter To Age"
+        android:inputType="textPersonName"
+        android:text="" />
 
-    </RelativeLayout>
+    <Button
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Filter" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#2196F3" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_manage"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
 </LinearLayout>
