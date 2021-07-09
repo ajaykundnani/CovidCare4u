@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,31 +23,33 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class ManageActivity extends AppCompatActivity {
+public class ManageActivity extends AppCompatActivity implements UserHolder.SelectedUser {
 
 
     RecyclerView recyclerView;
     private EditText from, to;
     private Button filter;
-    private List<User> users = new ArrayList<>();
+    public List<User> users = new ArrayList<>();
 
     private DatabaseReference dataReference = FirebaseDatabase.getInstance().getReference().child("Users");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage);
-
+/*
         from = (EditText)findViewById(R.id.From);
         to = (EditText)findViewById(R.id.To);
-        filter = (Button)findViewById(R.id.filter);
+        filter = (Button)findViewById(R.id.filter);*/
 
-        filter.setOnClickListener(new View.OnClickListener() {
+
+/*        filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 System.out.println("Hello");
@@ -59,13 +62,13 @@ public class ManageActivity extends AppCompatActivity {
                             filtered.add(u);
                             recyclerView = findViewById(R.id.recyclerview_manage);
                             UserHolder userHolder = new UserHolder();
-                            userHolder.setUsersList(filtered);
+                            userHolder.setUsersList(filtered,this);
                             recyclerView.setAdapter(userHolder);
                         }
                     }
                 }
             }
-        });
+        });*/
 
         LoadDatabase();
     }
@@ -95,12 +98,17 @@ public class ManageActivity extends AppCompatActivity {
         recyclerView =findViewById(R.id.recyclerview_manage);
 
         UserHolder userHolder = new UserHolder();
-        Collections.sort(users,new Sortbyage());
-        userHolder.setUsersList(users);
+        //Collections.sort(users,new Sortbyage());
+        userHolder.setUsersList(users,this);
         recyclerView.setAdapter(userHolder);
     }
 
+    @Override
+    public void selectedUser(User user) {
+        startActivity(new Intent(ManageActivity.this,Action_User.class).putExtra("data",user));
+    }
 }
+/*
 class Sortbyage implements Comparator<User>
 {
     public int compare(User a, User b)
@@ -108,4 +116,4 @@ class Sortbyage implements Comparator<User>
         return Integer.parseInt(a.getAge()) - Integer.parseInt(b.getAge());
     }
 
-}
+}*/

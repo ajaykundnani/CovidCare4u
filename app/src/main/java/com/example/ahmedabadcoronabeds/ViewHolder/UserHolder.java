@@ -18,6 +18,7 @@ public class UserHolder extends RecyclerView.Adapter<UserHolder.ViewHolder> {
 
 
     private List<User> users = new ArrayList<>();
+    private SelectedUser selectedUser;
 
     @NonNull
     @Override
@@ -29,11 +30,14 @@ public class UserHolder extends RecyclerView.Adapter<UserHolder.ViewHolder> {
         return new ViewHolder(cardview);
     }
 
+    public interface SelectedUser{
+        void selectedUser(User user);
+    }
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
 
         viewHolder.User_Name.setText(users.get(i).getName());
-        viewHolder.User_Age.setText(users.get(i).getAge());
         viewHolder.User_Role.setText(users.get(i).getRole());
     }
 
@@ -44,22 +48,29 @@ public class UserHolder extends RecyclerView.Adapter<UserHolder.ViewHolder> {
         return users.size();
     }
 
-    public void setUsersList(List<User> users)
+    public void setUsersList(List<User> users,SelectedUser selectedUser)
     {
         this.users = users;
+        this.selectedUser = selectedUser;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView User_Name;
-        private final TextView User_Age,User_Role;
+        private final TextView User_Role;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             User_Name = itemView.findViewById(R.id.User_Name);
-            User_Age = itemView.findViewById(R.id.User_Age);
             User_Role = itemView.findViewById(R.id.User_Role);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    selectedUser.selectedUser(users.get(getAdapterPosition()));
+                }
+            });
         }
     }
 }

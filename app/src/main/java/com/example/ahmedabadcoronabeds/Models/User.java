@@ -1,6 +1,8 @@
 package com.example.ahmedabadcoronabeds.Models;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String Name, Password, Role, HospitalCode, MobileNo, Age;
     public User() {
     }

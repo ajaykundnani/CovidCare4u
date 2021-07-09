@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Action_User" >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="80dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Name"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:hint="Enter Name"
+                android:inputType="textPersonName"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="80dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Mobile No."
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/MobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:ems="10"
+                android:hint="Enter Mobile Number"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="80dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Password"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:ems="10"
+                android:hint="Enter Password"
+                android:inputType="textPersonName"
+                android:password="true"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="80dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Role"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Role"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:hint="Enter Role"
+                android:inputType="textPersonName"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Hospital Code"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/HCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:hint="Enter Hospital Code"
+                android:inputType="textPersonName"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="80dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Age"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:hint="Enter Age"
+                android:inputType="textPersonName"
+                android:text="" />
+
+            <Button
+                android:id="@+id/Update"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Update User"
+                android:textColor="@color/green"
+                android:onClick="Update_User"/>
+
+            <Button
+                android:id="@+id/Remove"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Remove User"
+                android:textColor="@color/red"
+                android:onClick="Delete_User"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
