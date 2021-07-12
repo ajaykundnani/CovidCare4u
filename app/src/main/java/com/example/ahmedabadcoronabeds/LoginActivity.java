@@ -97,8 +97,11 @@ public class LoginActivity extends AppCompatActivity {
         if(entered_captcha.getText().toString().equals(captcha.getText().toString())) {
             if (IsValidUser(mobile.getText().toString(), pass.getText().toString())) {
                 Toast.makeText(getApplicationContext(), "Welcome "+sharedPreferences.getString("role",""), Toast.LENGTH_SHORT).show();
+                String name=sharedPreferences.getString("role","");
                 Intent i = new Intent(LoginActivity.this, DashboardActivity.class);
+                i.putExtra("role",name);
                 startActivity(i);
+
             } else {
                 Toast.makeText(getApplicationContext(), "Invalid Credentials", Toast.LENGTH_SHORT).show();
             }

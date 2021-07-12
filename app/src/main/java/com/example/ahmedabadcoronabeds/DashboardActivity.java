@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.example.ahmedabadcoronabeds.Models.Hospital;
+import com.example.ahmedabadcoronabeds.admin.Admin_ae;
 import com.example.ahmedabadcoronabeds.databinding.ActivityDashboardBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -145,6 +146,10 @@ public class DashboardActivity extends AppCompatActivity {
                 break;
             case R.id.manage:
                 startActivity(new Intent(DashboardActivity.this, ManageActivity.class));
+                break;
+
+            case R.id.add_new_hospital:
+                startActivity(new Intent(DashboardActivity.this, Admin_ae.class));
                 break;
         }
         return super.onOptionsItemSelected(item);

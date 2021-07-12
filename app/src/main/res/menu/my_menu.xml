@@ -12,4 +12,9 @@
         android:id="@+id/manage"
         android:title="Manage"/>
 
+    <item
+        android:id="@+id/add_new_hospital"
+        android:title="Add New Hospital"/>
+
+
 </menu>

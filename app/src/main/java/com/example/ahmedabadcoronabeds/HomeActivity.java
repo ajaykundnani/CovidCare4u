@@ -34,12 +34,15 @@ public class HomeActivity extends AppCompatActivity  implements HospitalHolder.S
     private String title;
     private EditText search;
     private List<Hospital> hospitals = new ArrayList<>();
+    String role;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        role = getIntent().getStringExtra("role");
 
         main_title=findViewById(R.id.main_title);
         search=findViewById(R.id.search);
@@ -84,6 +87,6 @@ public class HomeActivity extends AppCompatActivity  implements HospitalHolder.S
 
     @Override
     public void selectedHospital(Hospital hospital) {
-        startActivity(new Intent(HomeActivity.this,Action_hospital.class).putExtra("data_hospital",hospital));
+        startActivity(new Intent(HomeActivity.this,Action_hospital.class).putExtra("data_hospital",hospital).putExtra("role",role));
     }
 }

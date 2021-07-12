@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ public class Action_hospital extends AppCompatActivity {
     private EditText EditText_Name, EditText_Code,EditText_Address,EditText_Category,EditText_LUO,EditText_MobileNo,
             EditText_TO2,EditText_VO2,EditText_TIB,EditText_VIB,EditText_TICU,EditText_VICU,EditText_TICUV,
             EditText_VICUV;
+    Button remove_hospital,update_hospital;
     private DatabaseReference dataReference = FirebaseDatabase.getInstance().getReference().child("Hospitals");
 
     @Override
@@ -38,6 +40,23 @@ public class Action_hospital extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_action_hospital);
+
+        remove_hospital = findViewById(R.id.remove_hospital);
+        update_hospital = findViewById(R.id.update_hospital);
+        String role = getIntent().getStringExtra("role");
+        if (role.equals("User"))
+        {
+            remove_hospital.setVisibility(View.INVISIBLE);
+            update_hospital.setVisibility(View.INVISIBLE);
+            remove_hospital.setEnabled(false);
+            update_hospital.setEnabled(false);
+        }
+        else {
+            remove_hospital.setVisibility(View.VISIBLE);
+            update_hospital.setVisibility(View.VISIBLE);
+            remove_hospital.setEnabled(true);
+            update_hospital.setEnabled(true);
+        }
 
         EditText_Name = (EditText) findViewById(R.id.Hname);
         EditText_Code = (EditText) findViewById(R.id.Hcode);
