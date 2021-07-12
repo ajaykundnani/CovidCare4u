@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".admin.Admin_ae">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Hospital"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Hospital Name"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:hint="Enter Name"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Code"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/code"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:hint="Enter Code"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Address"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:hint="Enter Address"
+
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Category"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:hint="Enter Category"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Update"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/update"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:hint="Enter Last Update"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Mobile Num"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/mob_num"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:hint="Enter Mobile Number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="TO2"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/to2"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:hint="Enter TO2"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="VO2"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/vo2"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:hint="Enter VO2"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="TIB"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tib"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:hint="Enter TIB"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="VIB"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/vib"
+                android:hint="Enter VIB"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="TICU"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ticu"
+                android:hint="Enter TICU"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="VICU"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/vicu"
+                android:hint="Enter VICU"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="TICUV"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ticuv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Enter TICUV"
+                android:inputType="number" />
+
+            <TextView
+
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="VICUV"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/vicuv"
+                android:hint="Enter VICUV"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/update_hospital"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Update Hospital"
+                android:textColor="@color/green"
+                />
+
+            <Button
+                android:id="@+id/remove_hospital"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Remove Hospital"
+                android:textColor="@color/red"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

@@ -76,6 +76,8 @@ public class HomeActivity extends AppCompatActivity
 
         HospitalHolder hospitalHolder = new HospitalHolder();
         hospitalHolder.setHospitalList(hospitals);
+
+
         recyclerView.setAdapter(hospitalHolder);
     }
 

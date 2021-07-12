@@ -9,12 +9,14 @@
         android:roundIcon="@drawable/alogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AhmedabadCoronaBeds">
-        <activity android:name=".Action_User"></activity>
+        <activity android:name=".Action_hospital"></activity>
+        <activity android:name=".Action_User" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".ManageActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".DashboardActivity" />
+        <activity android:name=".admin.Admin_ae" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

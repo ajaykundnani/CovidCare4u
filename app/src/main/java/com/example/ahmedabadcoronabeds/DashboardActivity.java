@@ -146,6 +146,10 @@ public class DashboardActivity extends AppCompatActivity {
             case R.id.manage:
                 startActivity(new Intent(DashboardActivity.this, ManageActivity.class));
                 break;
+
+            case R.id.admin:
+                startActivity(new Intent(DashboardActivity.this, Admin_home.class));
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
