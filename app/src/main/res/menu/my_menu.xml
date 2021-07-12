@@ -12,7 +12,4 @@
         android:id="@+id/manage"
         android:title="Manage"/>
 
-    <item
-        android:id="@+id/admin"
-        android:title="Admin"/>
 </menu>

@@ -1,17 +1,48 @@
 package com.example.ahmedabadcoronabeds.Models;
 
-public class Hospital
+import java.io.Serializable;
+
+public class Hospital implements Serializable
 {
-    private String Name,Code,Address,Category,LastUpdateOn;
-    private double PhoneNo;
-    private double TO2;
-    private double VO2;
-    private double TIB;
-    private double VIB;
-    private double TICU;
-    private double VICU;
-    private double TICUV;
-    private double VICUV;
+    private String Name,Code,Address,Category,LastUpdateOn,PhoneNo,TO2,VO2,TIB,VIB,TICU,VICU,TICUV,VICUV;
+
+    public Hospital(String name, String code, String address, String category, String lastUpdateOn, String phoneNo, String TO2, String VO2, String TIB, String VIB, String TICU, String VICU, String TICUV, String VICUV) {
+        Name = name;
+        Code = code;
+        Address = address;
+        Category = category;
+        LastUpdateOn = lastUpdateOn;
+        PhoneNo = phoneNo;
+        this.TO2 = TO2;
+        this.VO2 = VO2;
+        this.TIB = TIB;
+        this.VIB = VIB;
+        this.TICU = TICU;
+        this.VICU = VICU;
+        this.TICUV = TICUV;
+        this.VICUV = VICUV;
+    }
+
+    @Override
+    public String toString() {
+        return "Hospital{" +
+                "Name='" + Name + '\'' +
+                ", Code='" + Code + '\'' +
+                ", Address='" + Address + '\'' +
+                ", Category='" + Category + '\'' +
+                ", LastUpdateOn='" + LastUpdateOn + '\'' +
+                ", PhoneNo='" + PhoneNo + '\'' +
+                ", TO2='" + TO2 + '\'' +
+                ", VO2='" + VO2 + '\'' +
+                ", TIB='" + TIB + '\'' +
+                ", VIB='" + VIB + '\'' +
+                ", TICU='" + TICU + '\'' +
+                ", VICU='" + VICU + '\'' +
+                ", TICUV='" + TICUV + '\'' +
+                ", VICUV='" + VICUV + '\'' +
+                '}';
+    }
+
     public Hospital() {
     }
 
@@ -55,112 +86,75 @@ public class Hospital
         LastUpdateOn = lastUpdateOn;
     }
 
-    public double getPhoneNo() {
+    public String getPhoneNo() {
         return PhoneNo;
     }
 
-    public void setPhoneNo(int phoneNo) {
+    public void setPhoneNo(String phoneNo) {
         PhoneNo = phoneNo;
     }
 
-    public double getTO2() {
+    public String getTO2() {
         return TO2;
     }
 
-    public void setTO2(double TO2) {
+    public void setTO2(String TO2) {
         this.TO2 = TO2;
     }
 
-    public double getVO2() {
+    public String getVO2() {
         return VO2;
     }
 
-    public void setVO2(double VO2) {
+    public void setVO2(String VO2) {
         this.VO2 = VO2;
     }
 
-    public double getTIB() {
+    public String getTIB() {
         return TIB;
     }
 
-    public void setTIB(double TIB) {
+    public void setTIB(String TIB) {
         this.TIB = TIB;
     }
 
-    public double getVIB() {
+    public String getVIB() {
         return VIB;
     }
 
-    public void setVIB(double VIB) {
+    public void setVIB(String VIB) {
         this.VIB = VIB;
     }
 
-    public double getTICU() {
+    public String getTICU() {
         return TICU;
     }
 
-    public void setTICU(double TICU) {
+    public void setTICU(String TICU) {
         this.TICU = TICU;
     }
 
-    public double getVICU() {
+    public String getVICU() {
         return VICU;
     }
 
-    public void setVICU(double VICU) {
+    public void setVICU(String VICU) {
         this.VICU = VICU;
     }
 
-    public double getTICUV() {
+    public String getTICUV() {
         return TICUV;
     }
 
-    public void setTICUV(double TICUV) {
+    public void setTICUV(String TICUV) {
         this.TICUV = TICUV;
     }
 
-    @Override
-    public String toString() {
-        return "Hospital{" +
-                "Name='" + Name + '\'' +
-                ", Code='" + Code + '\'' +
-                ", Address='" + Address + '\'' +
-                ", Category='" + Category + '\'' +
-                ", LastUpdateOn='" + LastUpdateOn + '\'' +
-                ", PhoneNo=" + PhoneNo +
-                ", TO2=" + TO2 +
-                ", VO2=" + VO2 +
-                ", TIB=" + TIB +
-                ", VIB=" + VIB +
-                ", TICU=" + TICU +
-                ", VICU=" + VICU +
-                ", TICUV=" + TICUV +
-                ", VICUV=" + VICUV +
-                '}';
-    }
-
-    public double getVICUV() {
+    public String getVICUV() {
         return VICUV;
     }
 
-    public void setVICUV(double VICUV) {
-        this.VICUV = VICUV;
-    }
-
-    public Hospital(String name, String code, String address, String category, String lastUpdateOn, int phoneNo, int TO2, int VO2, int TIB, int VIB, int TICU, int VICU, int TICUV, int VICUV) {
-        Name = name;
-        Code = code;
-        Address = address;
-        Category = category;
-        LastUpdateOn = lastUpdateOn;
-        PhoneNo = phoneNo;
-        this.TO2 = TO2;
-        this.VO2 = VO2;
-        this.TIB = TIB;
-        this.VIB = VIB;
-        this.TICU = TICU;
-        this.VICU = VICU;
-        this.TICUV = TICUV;
+    public void setVICUV(String VICUV) {
         this.VICUV = VICUV;
     }
 }

@@ -102,14 +102,14 @@ public class DashboardActivity extends AppCompatActivity {
         int TO2=0,VO2=0,TIB=0,VIB=0,TICU=0,VICU=0,TICUV=0,VICUV=0;
         for(Hospital h : hospitals){
             if(h.getCategory().equals(Category)){
-                TO2 += (int)h.getTO2();
-                VO2 += (int)h.getVO2();
-                TIB += (int)h.getTIB();
-                VIB += (int)h.getVIB();
-                TICU += (int)h.getTICU();
-                VICU += (int)h.getVICU();
-                TICUV += (int)h.getTICUV();
-                VICUV += (int)h.getVICUV();
+                TO2 += (int)Integer.parseInt(h.getTO2());
+                VO2 += (int)Integer.parseInt(h.getVO2());
+                TIB += (int)Integer.parseInt(h.getTIB());
+                VIB += (int)Integer.parseInt(h.getVIB());
+                TICU += (int)Integer.parseInt(h.getTICU());
+                VICU += (int)Integer.parseInt(h.getVICU());
+                TICUV += (int)Integer.parseInt(h.getTICUV());
+                VICUV += (int)Integer.parseInt(h.getVICUV());
             }
         }
         Obj_dashboard obj_dashboard = new Obj_dashboard(Integer.toString(TO2),Integer.toString(VO2),Integer.toString(TIB),Integer.toString(VIB),Integer.toString(TICU),Integer.toString(VICU),Integer.toString(TICUV),Integer.toString(VICUV));
@@ -145,10 +145,6 @@ public class DashboardActivity extends AppCompatActivity {
                 break;
             case R.id.manage:
                 startActivity(new Intent(DashboardActivity.this, ManageActivity.class));
-                break;
-
-            case R.id.admin:
-                startActivity(new Intent(DashboardActivity.this, Admin_home.class));
                 break;
         }
         return super.onOptionsItemSelected(item);

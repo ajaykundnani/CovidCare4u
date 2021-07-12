@@ -105,7 +105,7 @@ public class ManageActivity extends AppCompatActivity implements UserHolder.Sele
 
     @Override
     public void selectedUser(User user) {
-        startActivity(new Intent(ManageActivity.this,Action_User.class).putExtra("data",user));
+        startActivity(new Intent(ManageActivity.this,Action_User.class).putExtra("data_user",user));
     }
 }
 /*

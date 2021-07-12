@@ -50,7 +50,7 @@ public class Action_User extends AppCompatActivity {
         Intent intent = getIntent();
         if(intent.getExtras() != null){
 
-            User user = (User) intent.getSerializableExtra("data");
+            User user = (User) intent.getSerializableExtra("data_user");
 
             EditText_Name.setText(user.getName());
             EditText_MobileNo.setText(user.getMobileNo());

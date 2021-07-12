@@ -30,15 +30,15 @@ public class UserHolder extends RecyclerView.Adapter<UserHolder.ViewHolder> {
         return new ViewHolder(cardview);
     }
 
-    public interface SelectedUser{
-        void selectedUser(User user);
-    }
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
 
         viewHolder.User_Name.setText(users.get(i).getName());
         viewHolder.User_Role.setText(users.get(i).getRole());
+    }
+
+    public interface SelectedUser{
+        void selectedUser(User user);
     }
 
 

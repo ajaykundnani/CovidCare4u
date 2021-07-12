@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import com.example.ahmedabadcoronabeds.Models.Hospital;
 import com.example.ahmedabadcoronabeds.Models.User;
 import com.example.ahmedabadcoronabeds.ViewHolder.HospitalHolder;
+import com.example.ahmedabadcoronabeds.ViewHolder.UserHolder;
 import com.example.ahmedabadcoronabeds.databinding.ActivityDashboardBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class HomeActivity extends AppCompatActivity
+public class HomeActivity extends AppCompatActivity  implements HospitalHolder.SelectedHospital
 {
 
     private RecyclerView recyclerView;
@@ -75,10 +77,13 @@ public class HomeActivity extends AppCompatActivity
         recyclerView =findViewById(R.id.recyclerview_home);
 
         HospitalHolder hospitalHolder = new HospitalHolder();
-        hospitalHolder.setHospitalList(hospitals);
-
+        hospitalHolder.setHospitalList(hospitals,this);
 
         recyclerView.setAdapter(hospitalHolder);
     }
 
+    @Override
+    public void selectedHospital(Hospital hospital) {
+        startActivity(new Intent(HomeActivity.this,Action_hospital.class).putExtra("data_hospital",hospital));
+    }
 }

@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ahmedabadcoronabeds.Models.Hospital;
+import com.example.ahmedabadcoronabeds.Models.User;
 import com.example.ahmedabadcoronabeds.R;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class HospitalHolder extends RecyclerView.Adapter<HospitalHolder.ViewHold
 
 
     private List<Hospital> hospitals = new ArrayList<>();
+    private HospitalHolder.SelectedHospital selectedHospital;
 
     @NonNull
     @Override
@@ -37,25 +39,34 @@ public class HospitalHolder extends RecyclerView.Adapter<HospitalHolder.ViewHold
         viewHolder.hospital_name.setText(hospitals.get(i).getName());
     }
 
+    public interface SelectedHospital{
+        void selectedHospital(Hospital hospital);
+    }
 
     @Override
     public int getItemCount() {
         return hospitals.size();
     }
 
-    public void setHospitalList(List<Hospital> hospitals)
+    public void setHospitalList(List<Hospital> hospitals,SelectedHospital selectedHospital)
     {
         this.hospitals = hospitals;
+        this.selectedHospital = selectedHospital;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView hospital_name;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             hospital_name = itemView.findViewById(R.id.hospital_name);
-
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    selectedHospital.selectedHospital(hospitals.get(getAdapterPosition()));
+                }
+            });
         }
     }
 }

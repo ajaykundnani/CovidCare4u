@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".admin.Admin_ae">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Hospital"/>
+    tools:context=".Action_hospital">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -34,7 +28,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/name"
+                android:id="@+id/Hname"
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:hint="Enter Name"
@@ -52,7 +46,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/code"
+                android:id="@+id/Hcode"
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:hint="Enter Code"
@@ -103,12 +97,12 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="Update"
+                android:text="Last Update On"
                 android:textColor="@color/purple_500"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/update"
+                android:id="@+id/lastUpdate"
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:hint="Enter Last Update"
@@ -122,7 +116,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="Mobile Num"
+                android:text="Mobile Number"
                 android:textColor="@color/purple_500"
                 android:textStyle="bold" />
 
@@ -131,8 +125,6 @@
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:hint="Enter Mobile Number"
-                android:inputType="phone"
-                android:maxLength="10"
                 android:layout_height="wrap_content"/>
 
             <TextView
@@ -142,7 +134,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="TO2"
+                android:text="Total O2"
                 android:textColor="@color/purple_500"
                 android:textStyle="bold" />
 
@@ -151,7 +143,6 @@
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:hint="Enter TO2"
-                android:inputType="number"
                 android:layout_height="wrap_content"/>
 
             <TextView
@@ -161,7 +152,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="VO2"
+                android:text="Vacant O2"
                 android:textColor="@color/purple_500"
                 android:textStyle="bold" />
 
@@ -170,7 +161,6 @@
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:hint="Enter VO2"
-                android:inputType="number"
                 android:layout_height="wrap_content"/>
 
             <TextView
@@ -180,7 +170,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="TIB"
+                android:text="Total Isolation Beds"
                 android:textColor="@color/purple_500"
                 android:textStyle="bold" />
 
@@ -189,24 +179,22 @@
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:hint="Enter TIB"
-                android:inputType="number"
                 android:layout_height="wrap_content"/>
 
             <TextView
 
-                android:layout_width="131dp"
+                android:layout_width="184dp"
                 android:layout_height="26dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="VIB"
+                android:text="Vacant Isolation Beds"
                 android:textColor="@color/purple_500"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/vib"
                 android:hint="Enter VIB"
-                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:layout_height="wrap_content"/>
@@ -218,14 +206,13 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="TICU"
+                android:text="Total ICU"
                 android:textColor="@color/purple_500"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/ticu"
                 android:hint="Enter TICU"
-                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:layout_height="wrap_content"/>
@@ -237,26 +224,25 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="VICU"
+                android:text="Vacant ICU"
                 android:textColor="@color/purple_500"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/vicu"
                 android:hint="Enter VICU"
-                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:layout_height="wrap_content"/>
 
             <TextView
 
-                android:layout_width="131dp"
+                android:layout_width="280dp"
                 android:layout_height="26dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="TICUV"
+                android:text="Total ICU with Ventilator"
                 android:textColor="@color/purple_500"
                 android:textStyle="bold" />
 
@@ -266,23 +252,22 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Enter TICUV"
-                android:inputType="number" />
+                />
 
             <TextView
 
-                android:layout_width="131dp"
+                android:layout_width="276dp"
                 android:layout_height="26dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="VICUV"
+                android:text="Vacant ICU with Ventilator"
                 android:textColor="@color/purple_500"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/vicuv"
                 android:hint="Enter VICUV"
-                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:layout_height="wrap_content"/>
@@ -295,6 +280,7 @@
                 android:layout_marginRight="16dp"
                 android:text="Update Hospital"
                 android:textColor="@color/green"
+                android:onClick="Update_Hospital"
                 />
 
             <Button
@@ -305,14 +291,11 @@
                 android:layout_marginRight="16dp"
                 android:text="Remove Hospital"
                 android:textColor="@color/red"
+                android:onClick="Delete_Hospital"
                 />
 
         </LinearLayout>
 
     </ScrollView>
-
-
-
-
 
 </LinearLayout>
