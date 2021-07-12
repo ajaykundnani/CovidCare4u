@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.ahmedabadcoronabeds.Models.Hospital;
 import com.example.ahmedabadcoronabeds.admin.Admin_ae;
@@ -33,10 +34,19 @@ public class DashboardActivity extends AppCompatActivity {
     //Global Veriables
     private List<Hospital> hospitals = new ArrayList<>();
     private String SelectedCategory = "AMC";
+    String role;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //get role
+        role = getIntent().getStringExtra("role");
+        Toast.makeText(this, "Dashboard=>"+role, Toast.LENGTH_SHORT).show();
+
+
+
+
         //DataBinding
         ActivityDashboardBinding activityDashboardBinding = DataBindingUtil.setContentView(this,R.layout.activity_dashboard);
 
@@ -121,6 +131,7 @@ public class DashboardActivity extends AppCompatActivity {
     public void MoveToHome(View view){
         Intent intent = new Intent(DashboardActivity.this,HomeActivity.class);
         intent.putExtra("Category", SelectedCategory);
+        intent.putExtra("role",role);
         startActivity(intent);
     }
 

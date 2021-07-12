@@ -44,6 +44,7 @@ public class Action_hospital extends AppCompatActivity {
         remove_hospital = findViewById(R.id.remove_hospital);
         update_hospital = findViewById(R.id.update_hospital);
         String role = getIntent().getStringExtra("role");
+        Toast.makeText(this, "Action=>"+role, Toast.LENGTH_SHORT).show();
         if (role.equals("User"))
         {
             remove_hospital.setVisibility(View.INVISIBLE);

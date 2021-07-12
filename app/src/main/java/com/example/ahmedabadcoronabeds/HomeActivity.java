@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.ahmedabadcoronabeds.Models.Hospital;
 import com.example.ahmedabadcoronabeds.Models.User;
@@ -43,6 +44,7 @@ public class HomeActivity extends AppCompatActivity  implements HospitalHolder.S
         setContentView(R.layout.activity_home);
 
         role = getIntent().getStringExtra("role");
+        Toast.makeText(this, "Home=>"+role, Toast.LENGTH_SHORT).show();
 
         main_title=findViewById(R.id.main_title);
         search=findViewById(R.id.search);
