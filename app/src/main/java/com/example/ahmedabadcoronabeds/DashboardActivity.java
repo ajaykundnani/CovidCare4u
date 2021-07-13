@@ -124,6 +124,7 @@ public class DashboardActivity extends AppCompatActivity {
     //Move To Home activity
     public void MoveToHome(View view){
         Intent intent = new Intent(DashboardActivity.this,HomeActivity.class);
+        intent.putExtra("Category",SelectedCategory);
         startActivity(intent);
     }
 

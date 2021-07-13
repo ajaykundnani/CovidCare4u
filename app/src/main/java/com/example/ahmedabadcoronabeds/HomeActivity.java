@@ -25,6 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class HomeActivity extends AppCompatActivity  implements HospitalHolder.SelectedHospital
@@ -32,7 +33,7 @@ public class HomeActivity extends AppCompatActivity  implements HospitalHolder.S
 
     private RecyclerView recyclerView;
     private TextView main_title;
-    private String title;
+    private String title,Category;
     private EditText search;
     private List<Hospital> hospitals = new ArrayList<>();
     String role;
@@ -47,7 +48,7 @@ public class HomeActivity extends AppCompatActivity  implements HospitalHolder.S
         search=findViewById(R.id.search);
         title = getIntent().getStringExtra("title");
         main_title.setText(title);
-        String category = getIntent().getStringExtra("category");
+        Category = getIntent().getStringExtra("Category");
 
         LoadDatabase();
     }
@@ -78,8 +79,17 @@ public class HomeActivity extends AppCompatActivity  implements HospitalHolder.S
         //Recycler View Code
         recyclerView =findViewById(R.id.recyclerview_home);
 
+        List<Hospital> temp = new ArrayList<>();
+        temp.clear();
+        for(Hospital h :hospitals){
+            if(h.getCategory().matches(Category)){
+                temp.add(h);
+            }
+        }
+
+
         HospitalHolder hospitalHolder = new HospitalHolder();
-        hospitalHolder.setHospitalList(hospitals,this);
+        hospitalHolder.setHospitalList(temp,this);
 
         recyclerView.setAdapter(hospitalHolder);
     }

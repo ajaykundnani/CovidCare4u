@@ -284,7 +284,8 @@
                                     android:layout_width="0sp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    app:cardBackgroundColor="#6fffe9">
+                                    app:cardBackgroundColor="#6fffe9"
+                                    android:onClick="MoveToHome">
 
                                     <LinearLayout
                                         android:id="@+id/l6"
@@ -423,7 +424,8 @@
                                     android:layout_width="0sp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    app:cardBackgroundColor="#6fffe9">
+                                    app:cardBackgroundColor="#6fffe9"
+                                    android:onClick="MoveToHome">
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
@@ -562,7 +564,8 @@
                                     android:layout_width="0sp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    app:cardBackgroundColor="#6fffe9">
+                                    app:cardBackgroundColor="#6fffe9"
+                                    android:onClick="MoveToHome">
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
