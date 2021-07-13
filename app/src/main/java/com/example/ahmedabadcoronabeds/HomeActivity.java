@@ -43,9 +43,6 @@ public class HomeActivity extends AppCompatActivity  implements HospitalHolder.S
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        role = getIntent().getStringExtra("role");
-        Toast.makeText(this, "Home=>"+role, Toast.LENGTH_SHORT).show();
-
         main_title=findViewById(R.id.main_title);
         search=findViewById(R.id.search);
         title = getIntent().getStringExtra("title");

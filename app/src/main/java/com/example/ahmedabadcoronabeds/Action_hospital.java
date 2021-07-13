@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -34,6 +35,8 @@ public class Action_hospital extends AppCompatActivity {
             EditText_VICUV;
     Button remove_hospital,update_hospital;
     private DatabaseReference dataReference = FirebaseDatabase.getInstance().getReference().child("Hospitals");
+    private SharedPreferences sharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +46,6 @@ public class Action_hospital extends AppCompatActivity {
 
         remove_hospital = findViewById(R.id.remove_hospital);
         update_hospital = findViewById(R.id.update_hospital);
-        String role = getIntent().getStringExtra("role");
-        Toast.makeText(this, "Action=>"+role, Toast.LENGTH_SHORT).show();
-        if (role.equals("User"))
-        {
-            remove_hospital.setVisibility(View.INVISIBLE);
-            update_hospital.setVisibility(View.INVISIBLE);
-            remove_hospital.setEnabled(false);
-            update_hospital.setEnabled(false);
-        }
-        else {
-            remove_hospital.setVisibility(View.VISIBLE);
-            update_hospital.setVisibility(View.VISIBLE);
-            remove_hospital.setEnabled(true);
-            update_hospital.setEnabled(true);
-        }
 
         EditText_Name = (EditText) findViewById(R.id.Hname);
         EditText_Code = (EditText) findViewById(R.id.Hcode);
@@ -92,6 +80,15 @@ public class Action_hospital extends AppCompatActivity {
             EditText_VICU.setText(hospital.getVICU());
             EditText_TICUV.setText(hospital.getTICUV());
             EditText_VICUV.setText(hospital.getVICUV());
+
+            sharedPreferences = getSharedPreferences("User",MODE_MULTI_PROCESS);
+            if(sharedPreferences.contains("role")){
+                if(sharedPreferences.getString("role","") == "SuperAdmin") {
+                    Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_SHORT).show();
+                    remove_hospital.setVisibility(View.VISIBLE);
+                    update_hospital.setVisibility(View.VISIBLE);
+                }
+            }
         }
 
         LoadDatabase();

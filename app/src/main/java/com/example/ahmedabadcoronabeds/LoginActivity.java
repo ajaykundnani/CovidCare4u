@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private DatabaseReference dataReference = FirebaseDatabase.getInstance().getReference().child("Users");
     private List<User> users = new ArrayList<>();
-    private  SharedPreferences sharedPreferences;
+    public  SharedPreferences sharedPreferences;
     EditText entered_captcha, mobile, pass;
     TextView captcha;
 
@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
         if(users.size() != 0){
             for (User u : users) {
                 if (u.getMobileNo().equals(MobileNo) && u.getPassword().equals(Password)) {
-                    sharedPreferences = getSharedPreferences("User",MODE_PRIVATE);
+                    sharedPreferences = getSharedPreferences("User",MODE_MULTI_PROCESS);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("name",u.getName());
                     editor.putString("role",u.getRole());
@@ -96,12 +96,9 @@ public class LoginActivity extends AppCompatActivity {
     public void Login(View view){
         if(entered_captcha.getText().toString().equals(captcha.getText().toString())) {
             if (IsValidUser(mobile.getText().toString(), pass.getText().toString())) {
-                String role=sharedPreferences.getString("role","");
+                Toast.makeText(getApplicationContext(), "Welcome "+sharedPreferences.getString("role",""), Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(LoginActivity.this, DashboardActivity.class);
-                i.putExtra("role",role);
                 startActivity(i);
-                Toast.makeText(this, "Login=>"+role, Toast.LENGTH_SHORT).show();
-
             } else {
                 Toast.makeText(getApplicationContext(), "Invalid Credentials", Toast.LENGTH_SHORT).show();
             }

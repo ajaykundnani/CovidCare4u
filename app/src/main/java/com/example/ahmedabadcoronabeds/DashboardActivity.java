@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ActionMode;
@@ -34,18 +35,12 @@ public class DashboardActivity extends AppCompatActivity {
     //Global Veriables
     private List<Hospital> hospitals = new ArrayList<>();
     private String SelectedCategory = "AMC";
-    String role;
+    private SharedPreferences sharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //get role
-        role = getIntent().getStringExtra("role");
-        Toast.makeText(this, "Dashboard=>"+role, Toast.LENGTH_SHORT).show();
-
-
-
 
         //DataBinding
         ActivityDashboardBinding activityDashboardBinding = DataBindingUtil.setContentView(this,R.layout.activity_dashboard);
@@ -75,7 +70,6 @@ public class DashboardActivity extends AppCompatActivity {
 
         //Load firebase Database
         LoadDatabase(activityDashboardBinding);
-
     }
 
 
@@ -130,8 +124,6 @@ public class DashboardActivity extends AppCompatActivity {
     //Move To Home activity
     public void MoveToHome(View view){
         Intent intent = new Intent(DashboardActivity.this,HomeActivity.class);
-        intent.putExtra("Category", SelectedCategory);
-        intent.putExtra("role",role);
         startActivity(intent);
     }
 
@@ -141,6 +133,13 @@ public class DashboardActivity extends AppCompatActivity {
     {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.my_menu,menu);
+
+        sharedPreferences = getSharedPreferences("User",MODE_PRIVATE);
+        if(sharedPreferences.contains("role")){
+            if(sharedPreferences.getString("role","") == "SuperAdmin") {
+                menu.findItem(R.id.add_new_hospital).setVisible(true);
+            }
+        }
         return true;
     }
 
